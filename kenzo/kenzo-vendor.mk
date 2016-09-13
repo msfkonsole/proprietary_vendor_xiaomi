@@ -117,8 +117,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     vendor/xiaomi/kenzo/proprietary/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     vendor/xiaomi/kenzo/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
+    vendor/xiaomi/kenzo/proprietary/lib/libOmxVpp.so:system/lib/libOmxVpp.so \
     vendor/xiaomi/kenzo/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/xiaomi/kenzo/proprietary/lib/libRecoFace.so:system/lib/libRecoFace.so \
+    vendor/xiaomi/kenzo/proprietary/lib/libvpplibrary.so:system/lib/libvpplibrary.so \
     vendor/xiaomi/kenzo/proprietary/lib/soundfx/libdirac.so:system/lib/soundfx/libdirac.so \
     vendor/xiaomi/kenzo/proprietary/vendor/bin/mm-pp-daemon:system/vendor/bin/mm-pp-daemon \
     vendor/xiaomi/kenzo/proprietary/vendor/bin/perfd:system/vendor/bin/perfd \
@@ -265,6 +267,60 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_csidtg_cpp_preview.so:system/vendor/lib/libchromatix_csidtg_cpp_preview.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_csidtg_postproc.so:system/vendor/lib/libchromatix_csidtg_postproc.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_csidtg_preview.so:system/vendor/lib/libchromatix_csidtg_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_common.so:system/vendor/lib/libchromatix_ov16880_f16v01a_common.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_ds_chromatix.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_ds_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_120.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_60.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_90.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_liveshot.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_preview.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_snapshot.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_us_chromatix.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_us_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_video_full.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_video_full.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_cpp_video.so:system/vendor/lib/libchromatix_ov16880_f16v01a_cpp_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_default_preview_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_default_preview_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_default_video_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_default_video_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_default_video.so:system/vendor/lib/libchromatix_ov16880_f16v01a_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_120_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_120_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_120.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_60_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_60_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_60.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_90_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_90_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_hfr_90.so:system/vendor/lib/libchromatix_ov16880_f16v01a_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_liveshot.so:system/vendor/lib/libchromatix_ov16880_f16v01a_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_postproc.so:system/vendor/lib/libchromatix_ov16880_f16v01a_postproc.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_preview.so:system/vendor/lib/libchromatix_ov16880_f16v01a_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_snapshot.so:system/vendor/lib/libchromatix_ov16880_f16v01a_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_video_full.so:system/vendor/lib/libchromatix_ov16880_f16v01a_video_full.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_zsl_preview_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_zsl_preview_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_f16v01a_zsl_video_dw9718s_f16v01a.so:system/vendor/lib/libchromatix_ov16880_f16v01a_zsl_video_dw9718s_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_common.so:system/vendor/lib/libchromatix_ov16880_omida05_common.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_ds_chromatix.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_ds_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_120.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_60.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_90.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_liveshot.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_preview.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_snapshot.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_us_chromatix.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_us_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_video_full.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_video_full.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_cpp_video.so:system/vendor/lib/libchromatix_ov16880_omida05_cpp_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_default_preview_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_default_preview_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_default_video_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_default_video_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_default_video.so:system/vendor/lib/libchromatix_ov16880_omida05_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_120_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_120_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_120.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_60_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_60_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_60.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_90_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_90_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_hfr_90.so:system/vendor/lib/libchromatix_ov16880_omida05_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_liveshot.so:system/vendor/lib/libchromatix_ov16880_omida05_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_postproc.so:system/vendor/lib/libchromatix_ov16880_omida05_postproc.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_preview.so:system/vendor/lib/libchromatix_ov16880_omida05_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_snapshot.so:system/vendor/lib/libchromatix_ov16880_omida05_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_video_full.so:system/vendor/lib/libchromatix_ov16880_omida05_video_full.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_zsl_preview_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_zsl_preview_dw9761b_omida05.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov16880_omida05_zsl_video_dw9761b_omida05.so:system/vendor/lib/libchromatix_ov16880_omida05_zsl_video_dw9761b_omida05.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov5670_a3_default_preview.so:system/vendor/lib/libchromatix_ov5670_a3_default_preview.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov5670_a3_default_video.so:system/vendor/lib/libchromatix_ov5670_a3_default_video.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_ov5670_a3_hfr_120.so:system/vendor/lib/libchromatix_ov5670_a3_hfr_120.so \
@@ -442,6 +498,56 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k3p3_omida01_postproc.so:system/vendor/lib/libchromatix_s5k3p3_omida01_postproc.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k3p3_omida01_preview.so:system/vendor/lib/libchromatix_s5k3p3_omida01_preview.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k3p3_omida01_snapshot.so:system/vendor/lib/libchromatix_s5k3p3_omida01_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_a3_default_preview.so:system/vendor/lib/libchromatix_s5k5e8_yx13_a3_default_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_a3_default_video.so:system/vendor/lib/libchromatix_s5k5e8_yx13_a3_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_yx13_a3_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_common.so:system/vendor/lib/libchromatix_s5k5e8_yx13_common.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_ds_chromatix.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_ds_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_liveshot.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_preview.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_snapshot.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_us_chromatix.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_us_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_cpp_video.so:system/vendor/lib/libchromatix_s5k5e8_yx13_cpp_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_default_video.so:system/vendor/lib/libchromatix_s5k5e8_yx13_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_yx13_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_yx13_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_yx13_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_liveshot.so:system/vendor/lib/libchromatix_s5k5e8_yx13_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_postproc.so:system/vendor/lib/libchromatix_s5k5e8_yx13_postproc.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_preview.so:system/vendor/lib/libchromatix_s5k5e8_yx13_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_snapshot.so:system/vendor/lib/libchromatix_s5k5e8_yx13_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_zsl_preview.so:system/vendor/lib/libchromatix_s5k5e8_yx13_zsl_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_yx13_zsl_video.so:system/vendor/lib/libchromatix_s5k5e8_yx13_zsl_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_default_preview.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_default_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_default_video.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_a3_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_common.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_common.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_ds_chromatix.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_ds_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_liveshot.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_preview.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_snapshot.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_us_chromatix.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_us_chromatix.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_video.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_cpp_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_default_video.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_default_video.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_120.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_120.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_60.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_60.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_90.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_hfr_90.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_liveshot.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_liveshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_postproc.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_postproc.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_preview.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_snapshot.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_snapshot.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_zsl_preview.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_zsl_preview.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libchromatix_s5k5e8_z5e8yab_zsl_video.so:system/vendor/lib/libchromatix_s5k5e8_z5e8yab_zsl_video.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libdataitems.so:system/vendor/lib/libdataitems.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
@@ -532,6 +638,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_isp_sub_module.so:system/vendor/lib/libmmcamera_isp_sub_module.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_isp_wb40.so:system/vendor/lib/libmmcamera_isp_wb40.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:system/vendor/lib/libmmcamera_optizoom_lib.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov16880_f16v01a_eeprom.so:system/vendor/lib/libmmcamera_ov16880_f16v01a_eeprom.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov16880_f16v01a.so:system/vendor/lib/libmmcamera_ov16880_f16v01a.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov16880_omida05_eeprom.so:system/vendor/lib/libmmcamera_ov16880_omida05_eeprom.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov16880_omida05.so:system/vendor/lib/libmmcamera_ov16880_omida05.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov5670_d5v01g.so:system/vendor/lib/libmmcamera_ov5670_d5v01g.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov5670_omi5f06.so:system/vendor/lib/libmmcamera_ov5670_omi5f06.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_ov5670_polaris.so:system/vendor/lib/libmmcamera_ov5670_polaris.so \
@@ -545,6 +655,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k3p3_gt24c64_eeprom.so:system/vendor/lib/libmmcamera_s5k3p3_gt24c64_eeprom.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k3p3_omida01_eeprom.so:system/vendor/lib/libmmcamera_s5k3p3_omida01_eeprom.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k3p3_omida01.so:system/vendor/lib/libmmcamera_s5k3p3_omida01.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k5e8_yx13.so:system/vendor/lib/libmmcamera_s5k5e8_yx13.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k5e8_z5e8yab_eeprom.so:system/vendor/lib/libmmcamera_s5k5e8_z5e8yab_eeprom.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_s5k5e8_z5e8yab.so:system/vendor/lib/libmmcamera_s5k5e8_z5e8yab.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_sunny_omi5f06_eeprom.so:system/vendor/lib/libmmcamera_sunny_omi5f06_eeprom.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_thread_services.so:system/vendor/lib/libmmcamera_thread_services.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmcamera_tintless_algo.so:system/vendor/lib/libmmcamera_tintless_algo.so \
@@ -558,6 +671,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmqjpeg_codec.so:system/vendor/lib/libmmqjpeg_codec.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmqjpegdma.so:system/vendor/lib/libmmqjpegdma.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmQSM.so:system/vendor/lib/libmmQSM.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmsw_detail_enhancement.so:system/vendor/lib/libmmsw_detail_enhancement.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmsw_math.so:system/vendor/lib/libmmsw_math.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmsw_opencl.so:system/vendor/lib/libmmsw_opencl.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib/libmmsw_platform.so:system/vendor/lib/libmmsw_platform.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmorpho_easy_hdr.so:system/vendor/lib/libmorpho_easy_hdr.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmorpho_hdr_checker.so:system/vendor/lib/libmorpho_hdr_checker.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib/libmorpho_image_stab4.so:system/vendor/lib/libmorpho_image_stab4.so \
