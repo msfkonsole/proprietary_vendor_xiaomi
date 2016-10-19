@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/bin/cnd:system/bin/cnd \
     vendor/xiaomi/kenzo/proprietary/bin/consumerird:system/bin/consumerird \
     vendor/xiaomi/kenzo/proprietary/bin/dpmd:system/bin/dpmd \
+    vendor/xiaomi/kenzo/proprietary/bin/gx_fpd:system/bin/gx_fpd \
     vendor/xiaomi/kenzo/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/xiaomi/kenzo/proprietary/bin/hvdcp_opti:system/bin/hvdcp_opti \
     vendor/xiaomi/kenzo/proprietary/bin/ipacm-diag:system/bin/ipacm-diag \
